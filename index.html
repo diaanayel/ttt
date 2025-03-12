@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <script type="module" src="src/js/index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tic Tac Toe</h1>
+    </header>
+
+    <main>
+      <div class="board" id="board">
+        <div class="cell" data index="0"></div>
+        <div class="cell" data index="1"></div>
+        <div class="cell" data index="2"></div>
+        <div class="cell" data index="3"></div>
+        <div class="cell" data index="4"></div>
+        <div class="cell" data index="5"></div>
+        <div class="cell" data index="6"></div>
+        <div class="cell" data index="7"></div>
+        <div class="cell" data index="8"></div>
+      </div>
+      <section class="info">
+        <label id="p1">No Active Games!</label>
+        <label id="p2">No Active Games!</label>
+        <label id="info">No Active Games!</label>
+      </section>
+      <section class="controls" id="controls">
+        <button id="players-data" disabled>Edit Players</button>
+        <button id="start">Start</button>
+        <button id="restart" disabled>Restart</button>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://github.com/diaanayel/ttt.git" rel="noreferrer" target="_blank">link on github</a>
+    </footer>
+  </div>
+
+<dialog>
+  <form id="form-players-data">
+    <fieldset class="players">
+      <fieldset>
+        <legend>Player 1</legend>
+        <input type="text" id="p1name" name="p1name" value="Player 1" required>
+        <fieldset>
+          Mark: 
+          <label><input type="radio" name="p1mark" value="x" checked> X</label>
+          <label><input type="radio" name="p1mark" value="o"> O</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Player 2</legend>
+        <input type="text" id="p2name" name="p2name" value="Player 2" required>
+        <fieldset>
+          Mark: 
+          <label><input type="radio" name="p2mark" value="x"> X</label>
+          <label><input type="radio" name="p2mark" value="o" checked> O</label>
+        </fieldset>
+      </fieldset>
+    </fieldset>
+
+    <fieldset class="controls">
+      <button type="button" id="cancel">Cancel</button>
+      <button type="submit">Confirm</button>
+    </fieldset>
+  </form>
+</dialog>
+</body>
+</html>
